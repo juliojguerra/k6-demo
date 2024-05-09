@@ -8,13 +8,13 @@ export const options = {
   duration: "10s", // Duration of the test
   thresholds: {
     // 95% of requests should complete below 4000ms
-    http_req_duration: ["p(95)<4000"],
+    http_req_duration: ["p(95)<50"],
 
     // The count of 'my_counter' should be more than 10
     my_counter: ["count>10"],
 
     // 95% of 'response_time_news_page' should be below 3000ms and 99% below 7000ms
-    response_time_news_page: ["p(95)<3000", "p(99)<7000"],
+    response_time_news_page: ["p(95)<120", "p(99)<7000"],
   },
 };
 
