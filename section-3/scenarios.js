@@ -9,11 +9,11 @@ export const options = {
   vus: 10, // Number of virtual users to simulate
   duration: "10s", // Duration of the test
   thresholds: {
-    http_req_duration: ["p(95)<300"], // 95% of requests should complete below 400ms
-    http_req_duration: ["max<2000"],
-    http_req_failed: ["rate<0.1"], // Uncomment this line if you want to ensure less than 1% of requests fail
+    http_req_duration: ["p(95)<100"], // 95% of requests should complete below 400ms
+    //http_req_duration: ["max<2000"],
+    http_req_failed: ["rate<0.03"], // Uncomment this line if you want to ensure less than 1% of requests fail
     http_reqs: ["count>20"], // There should be more than 20 requests
-    http_reqs: ["rate>4"], // The rate of requests should be more than 4 per second
+    http_reqs: ["rate>9"], // The rate of requests should be more than 9 per second
     vus: ["value >= 1"],
     checks: ["rate>=0.98"],
   },
